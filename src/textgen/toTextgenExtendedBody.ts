@@ -9,7 +9,7 @@ export const toTextgenExtendedBody = (
 ) => {
   console.log("toTextgenExtendedBody: request", request);
   const { body, options = {} } = request;
-  const { promptStyle = "message", templateType = "chatML" } = options;
+  const { promptStyle = "message", templateType = "chatML", stop } = options;
 
   const extendedBody: OobaboogaTextgenRequest & OpenRouterTextgenRequest = {
     max_tokens: 256,
@@ -22,6 +22,7 @@ export const toTextgenExtendedBody = (
         : undefined,
     ...body,
     messages: promptStyle === "raw" ? undefined : body.messages,
+    stop,
   };
   return extendedBody;
 };

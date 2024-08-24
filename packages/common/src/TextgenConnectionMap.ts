@@ -10,6 +10,8 @@ export type TextgenConnectionMap = {
         templateType: TextgenChatTemplateType;
         provider: TextgenProviderType;
         promptStyle: TextgenPromptStyleType;
+        stopAfter: string | string[];
+        stop: string | string[];
       }>;
       body: OpenRouterTextgenRequest;
     };
