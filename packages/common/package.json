@@ -1,0 +1,12 @@
+{
+  "name": "@mjtdev/textgen-service-common",
+  "version": "1.0.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "types": "src/index.d.ts",
+  "sideEffects": false,
+  "devDependencies": {},
+  "peerDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
