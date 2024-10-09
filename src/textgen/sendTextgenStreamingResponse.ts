@@ -24,6 +24,9 @@ export const sendTextgenStreamingResponse: ConnectionListener<
     finishedConsumingAbortController.abort();
   };
   signal.addEventListener("abort", onAbort);
+  finishedConsumingSignal.addEventListener("abort", () => {
+    console.log("finishedConsumingSignal aborted");
+  });
   const { authToken, body, url } = toTextgenFetchParams({
     request: detail,
     headers,
