@@ -1,0 +1,3 @@
+IMAGE_TAG=mjtdev/textgen:latest
+NAME=textgen
+NETWORK_NAME=mq_network

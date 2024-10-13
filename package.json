@@ -10,7 +10,10 @@
     "build-esbuild": "esbuild src/index.ts --platform=node --bundle --minify --outfile=dist/index.js",
     "build": "rollup -c",
     "watch": "rollup -c --watch",
-    "check": "tsc --noEmit -w"
+    "check": "tsc --noEmit -w",
+    "docker-build": "scripts/build.sh",
+    "docker-run": "scripts/run.sh",
+    "docker-push": "scripts/push.sh"
   },
   "keywords": [],
   "author": "Matt Taylor @mjtdev",
